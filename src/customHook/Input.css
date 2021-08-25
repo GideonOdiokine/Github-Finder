@@ -1,0 +1,25 @@
+.input{
+    width: 80%;
+    height: 50px;
+    border-radius: 12px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+input{
+    background: none;
+    outline: none;
+    border: 0;
+    flex: 1;
+    margin-left: 12px;
+}
+button{
+    margin-right: 8px;
+    background: rgb(168, 173, 182);;
+    border: 0;
+    border-radius: 10px;
+    width: 50px;
+    height: 30px;
+    cursor: pointer;
+}
