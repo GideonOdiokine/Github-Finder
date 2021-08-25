@@ -1,12 +1,16 @@
 import React, { useState } from "react";
 
-function Search({ searchUser }) {
+function Search({ searchUser, clearUser, users, showAlert }) {
   const [text, setText] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    searchUser(text);
-    setText("");
+    if (text === "") {
+      showAlert("Please enter something", "light");
+    } else {
+      searchUser(text);
+      setText("");
+    }
   };
 
   return (
@@ -25,6 +29,11 @@ function Search({ searchUser }) {
           className="btn btn-dark btn-block"
         />
       </form>
+      {users.length > 0 && (
+        <button className="btn btn-light btn-block" onClick={clearUser}>
+          Clear
+        </button>
+      )}
     </div>
   );
 }
