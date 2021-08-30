@@ -1,7 +1,14 @@
 import React, { useState } from "react";
+import { useContext } from "react";
+import GithubContext from "../../context/github/githubContext";
+import AlertContext from "../../context/alert/alertContext";
 
-function Search({ searchUser, clearUser, users, showAlert }) {
+function Search() {
+  const githubContext = useContext(GithubContext);
+  const alertContext = useContext(AlertContext);
   const [text, setText] = useState("");
+  const { users, searchUser, clearUser } = githubContext;
+  const { showAlert } = alertContext;
 
   const handleSubmit = (e) => {
     e.preventDefault();
