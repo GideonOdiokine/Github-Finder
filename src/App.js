@@ -15,7 +15,7 @@ const App = () => {
   return (
     <GithubState>
       <Router>
-        <div className="App">
+        <div className="App you">
           <Navbar title="Github Finder" />
           <div className="container">
             <AlertState>
